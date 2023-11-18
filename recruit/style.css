@@ -1,0 +1,337 @@
+/* font */
+@font-face{
+  font-family: 'KoPubWorld Dotum_Pro Eng';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('KoPubWorld Dotum_Pro Medium'), 
+  url('./font/KoPubWorld_Dotum_Pro_Medium.woff') format('woff'),
+  url('./font/KoPubWorld_Dotum_Pro_Medium.otf') format('opentype');
+  
+}
+
+@font-face{
+  font-family: 'KoPubWorld Dotum_Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('KoPubWorld Dotum_Pro Bold'), 
+  url('./font/KoPubWorld_Dotum_Pro_Bold.woff') format('woff'),
+  url('./font/KoPubWorld_Dotum_Pro_Bold.otf') format('opentype');
+  
+}
+
+@font-face{
+  font-family: 'KoPubWorld Dotum_Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('KoPubWorld Dotum_Pro Medium'), 
+  url('./font/KoPubWorld_Dotum_Pro_Medium.woff') format('woff'),
+  url('./font/KoPubWorld_Dotum_Pro_Medium.otf') format('opentype');
+  
+}
+
+@font-face{
+  font-family: 'KoPubWorld Dotum_Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('KoPubWorld Dotum_Pro Light'), 
+  url('./font/KoPubWorld_Dotum_Pro_Light.woff') format('woff'),
+  url('./font/KoPubWorld_Dotum_Pro_Light.otf') format('opentype');
+  
+}
+
+/* reset */
+body, h1, h2, h3, h4, h5, h6, html, li, p, ul { margin:0;padding:0;vertical-align: baseline;}
+h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight:400}
+ul {list-style:none}
+html { box-sizing:border-box }
+*, :after, :before {box-sizing:inherit}
+img {height:auto;max-width:100%; display: block;}
+td, th {padding:0}
+
+html { font-size: 62.5%; font-family: "Helvetica neue", "KoPubWorld Dotum_Pro", "Arial", "Malgun Gothic", sans-serif; line-height: 1; }
+button { margin:0; padding: 0; border: 0; background-color: transparent; cursor: pointer; }
+b { font-weight: 700; }
+body { color: #fff; background-color: #272727; position: relative; max-width: 1920px; min-width: 360px; margin: 0 auto; }
+
+.mo {display: none;}
+
+/* 헤더 */
+header { width: 100%; height: 9.2rem; box-sizing: content-box; border-bottom: 1px solid #545454; position: fixed; top: 0; left: 0; background-color: rgba(39,39,39,0.6); z-index: 3; }
+.header_cont { display: flex; justify-content: space-between ; align-items: center; padding: 4rem 8rem 2.8rem 8rem; box-sizing: border-box; height: 100%; max-width: 1920px; min-width: 360px; margin: 0 auto; }
+.header_cont > * { flex: 0 1 auto; height: 100% }
+.header_cont h1 a { display: block; width: 100%; height: 100%; }
+.header_cont h2 { font-size: 2rem; font-weight: 500; }
+.header_cont .menu { font-size: 1.4rem; font-weight: 500; font-family: "KoPubWorld Dotum_Pro Eng", sans-serif; line-height: 1.2; letter-spacing: 0.28px; display: flex; align-items: center; }
+.header_cont .gnb_open_button { margin-left: 0.6rem; }
+
+main { width: 100%; padding-top: calc(9.2rem + 1px); }
+
+/* 이미지 배너 */
+.img_banner { position: relative; width: 100%; padding-bottom: 58.85%; }
+.img_banner::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; padding-bottom: 58.85%; background: center/ auto 100% no-repeat url('images/bg_img01_pc.png'), lightgray 50%; mix-blend-mode: overlay;}
+.img_banner_cont { padding: 5.7% 4.2% 0 4.2%; position: absolute; top: 0; left: 0; }
+.banner_main_text { margin-bottom: 8.6rem; }
+.banner_main_text p:first-child { font-family: 'Cabin', sans-serif; font-size: 2.8rem; font-weight: 400; line-height: 1.5; margin-bottom: 2rem; }
+.banner_main_text p:last-child { font-size: 7.6rem; font-weight: 500; line-height: 1.3; }
+.banner_sub_text p { font-size: 2rem; font-weight: 300; line-height: 1.7; }
+
+.apply_now_btn { position: absolute; bottom: 10.2%; right: 8rem; display: block; color: #D6E2FF; font-size: 2.2rem; font-weight: 700; letter-spacing: -0.02rem; padding: 2rem 4rem; background: url(images/round_border.svg) no-repeat center/ 100% auto; }
+
+
+/* 텍스트 배너 */
+.rolling_banner { width: 100%; font-family: "Pretendard", sans-serif; font-size: 7rem; color: #3E3E3E; font-weight: 500; padding: 9.6rem 0 calc(9.6rem - 2.8rem); white-space: nowrap; background: linear-gradient(180deg, #040402 -3.44%, rgba(4, 4, 2, 0.00) 96.56%);; }
+.rolling_banner .rolling_row { 
+  width: 100%; height: calc(7rem + 2.8rem);
+  position: relative;
+  overflow-x: hidden;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none 
+}
+.rolling_banner .track { position: absolute; width: 100%; height: 100%; display: flex; }
+.rolling_banner .track > span { display: inline-flex; }
+.rolling_banner .track > span > span { padding: 0 2rem; }
+.rolling_banner .highlight { color: #D6E2FF; font-weight: 600; }
+
+/* 텍스트 애니메이션 */
+/* 홀수 => 왼쪽, 짝수 => 오른쪽 */
+.rolling_banner .track > span { 
+  -webkit-animation: marquee 50000ms linear infinite forwards;
+  animation: marquee 50000ms linear infinite;
+}
+.rolling_banner .rolling_row:nth-child(2n-1) .track > span { 
+  -webkit-animation-duration: 25000ms;
+  animation-duration: 25000ms;
+}
+.rolling_banner .rolling_row:nth-child(2n) .track > span {
+  -webkit-animation-name: marquee-r;
+  animation-name: marquee-r;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes marquee-r {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes marquee-r {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.section_title .small_title { color: #D6E2FF; font-size: 2.4rem; font-weight: 500; line-height: 1.4; margin-bottom: 0.6rem; }
+.section_title h3 { font-size: 5.6rem; font-weight: 500; line-height: 1.6; }
+
+/* 이너뷰다운 당신
+바로, 지금  */
+.recruit_section.hiring { width: 100%; position: relative; padding-bottom: 76.14%; margin-top: 5rem; }
+.recruit_section.hiring::before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; padding-bottom: 76.14%; background: url('images/bg_img02_pc.png') no-repeat center/100% auto; mix-blend-mode: soft-light; }
+.hiring_cont { padding: 12rem 8rem 0; display: flex; justify-content: space-between; position: absolute; top: 0; left: 0; width: 100%; }
+.hiring_job_list { flex: 1 1 auto; margin-left: 8.5%; border-top: 1px solid #545454; }
+.hiring_job_item { padding: 5rem 4rem 5rem 1.6rem; border-bottom: 1px solid #545454; display: flex; justify-content: flex-end; align-items: center; }
+.hiring_job_item h4 { font-size: 6rem; font-weight: 500; margin-right: auto; }
+.hiring_job_item .job_experience { font-size: 2.4rem; font-weight: 700; color: #D6E2FF; margin-right: 4.1rem; }
+.hiring_job_item .hiring_badge { display: inline-block; font-size: 2rem; font-weight: 700; color: #D6E2FF; padding: 1.6rem 3.4rem 1.6rem 4rem; background: url('images/round_border.svg') no-repeat center/auto 100%; margin-right: 5.4rem; }
+.hiring_job_item button { width: 6rem; height: 6rem; }
+.hiring_job_item button img { width: 100%; height: 100%; }
+
+/* INNERVIEW Culture */
+.recruit_section.cultures { padding: 0 8rem 16rem; }
+.cultures_cont { margin-top: 5rem; }
+.cultures_list { display: flex; flex-wrap: wrap; justify-content: flex-start; }
+.cultures_item { width: calc((100% - 2rem * 5) / 5); margin-right: 2rem; background-color: #1C1C1C; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 7.5rem 1rem; text-align: center;}
+.cultures_item:nth-child(5n) { margin-right: 0; }
+.cultures_item:nth-child(n + 6) { margin-top: 2rem;}
+.culture_title { font-size: 2.4rem; font-weight: 700; line-height: 1.7; margin-bottom: 1.2rem; }
+.culture_desc { font-size: 1.8rem; color: #C9C9C9; font-weight: 300; line-height: 1.7; }
+
+.cultures_item::before { content: ''; display: block; width: 4.8rem; height: 4.8rem; background-repeat: no-repeat; background-position: center; background-size: 100% auto; margin-bottom: 1rem; }
+.cultures_item:nth-child(1)::before { background-image: url('images/culture_icon01.svg');}
+.cultures_item:nth-child(2)::before { background-image: url('images/culture_icon02.svg');}
+.cultures_item:nth-child(3)::before { background-image: url('images/culture_icon03.svg');}
+.cultures_item:nth-child(4)::before { background-image: url('images/culture_icon04.svg');}
+.cultures_item:nth-child(5)::before { background-image: url('images/culture_icon05.svg');}
+.cultures_item:nth-child(6)::before { background-image: url('images/culture_icon06.svg');}
+.cultures_item:nth-child(7)::before { background-image: url('images/culture_icon07.svg');}
+.cultures_item:nth-child(8)::before { background-image: url('images/culture_icon08.svg');}
+.cultures_item:nth-child(9)::before { background-image: url('images/culture_icon09.svg');}
+.cultures_item:nth-child(10)::before { background-image: url('images/culture_icon10.svg');}
+.cultures_item:nth-child(11)::before { background-image: url('images/culture_icon11.svg');}
+
+/* 푸터 */
+footer { border-top: 1px solid #545454; width: 100%; position: relative; }
+.footer_cont {padding: 6.1rem 9rem 6.8rem; display: flex; }
+.footer_cont .innerview_logo { height: 3.8rem; width: auto; margin-right: 10.5rem; }
+.footer_cont .innerview_logo a { display: block; width: 100%; height: 100%; }
+.footer_cont .innerview_logo img { height: 100%; width: auto; }
+.footer_cont address { display: flex; font-size: 1.6rem; font-weight: 300; font-style: normal; }
+.footer_cont address .office { margin-right: 7rem;}
+.footer_cont address .office div:first-child { font-weight: 500;}
+.footer_cont address > div > div:last-child { margin-top: 1.6rem; }
+.copyright { font-size: 1.6rem; font-weight: 300; margin-top: 1.6rem; }
+
+.top_button { position: absolute; top: 4rem; right: 8rem; width: 8.8rem; height: 8.8rem }
+.top_button img { width: 100%; height: 100%; }
+
+@media screen and (max-width: 1536px) {
+  html { font-size: 54.68%; }
+}
+
+@media screen and (max-width: 1336px) {
+  html { font-size: 50.78%; }
+  .recruit_section.hiring { padding: 0 8rem; }
+  .hiring_job_list {
+    margin-top: 5.2rem;
+    margin-left: 0;
+  } 
+  .recruit_section.hiring {
+    padding-bottom: 17.2%;
+  }
+  .hiring_cont { position: static; padding: 0; }
+  .recruit_section.hiring::before { content: none; }
+  .hiring_cont { flex-direction: column;}
+
+  .cultures_item {
+    width: calc((100% - 2rem * 3) / 4);
+  }
+  .cultures_item:nth-child(n + 6) {margin-top: 0;}
+  .cultures_item:nth-child(n + 5) { margin-top: 2rem; }
+  .cultures_item:nth-child(5n) { margin-right: 2rem; }
+  .cultures_item:nth-child(4n) {margin-right: 0;}
+}
+
+@media screen and (max-width: 1024px) {
+  html { font-size: 46.87%; }
+  
+  .cultures_item {
+    width: calc((100% - 2rem * 2) / 3);
+  }
+  .cultures_item:nth-child(3n) { margin-right: 0; }
+  .cultures_item:nth-child(4n) {margin-right: 2rem;}
+  .cultures_item:nth-child(n + 6) {margin-top: 0;}
+  .cultures_item:nth-child(n + 5) {margin-top: 0;}
+  .cultures_item:nth-child(n + 4) { margin-top: 2rem; }
+
+  .footer_cont .innerview_logo { display: none; }
+  .footer_cont address { flex-direction: column; }
+  .footer_cont address .office { margin-right: 0; }
+  .footer_cont address > div > div:last-child { margin-top: 1.4rem; }
+  .footer_cont address .office + div { margin-top: 2.6rem; }
+  .footer_cont address > div > div:last-child { margin-top: 1.2rem; }
+  .footer_cont .copyright { margin-top: 7.2rem; }
+
+  .top_button { width: 6rem; height: 6rem; }
+}
+
+@media screen and (max-width: 768px) {
+  html { font-size: 62.5%; }
+  .mo { display: initial;}
+
+  header { height: 4.8rem; }
+  .header_cont { padding: 1.5rem 2.4rem 1.6rem; }
+  .header_cont h1 { width: auto; height: 100%; }
+  .header_cont h1 img { width: auto; height: 100%; }
+  .header_cont h2 { display: none; }
+  .header_cont .menu span { display: none; }
+
+  main { padding-top: calc(4.8rem + 1px); }
+  .img_banner { padding-bottom: 208%; }
+  .img_banner::before { padding-bottom: 208%; background: center/ auto 100% no-repeat url('images/bg_img01_mo.png'), lightgray 50%}
+  .img_banner_cont { padding: 6rem 2.1rem 0; }
+  .banner_main_text { margin-bottom: 4rem; }
+  .banner_sub_text { padding-left: 0.2rem; }
+  .img_banner .banner_main_text p:first-child { font-size: 18px; }  
+  .img_banner .banner_main_text p:last-child { font-size: 32px; }  
+  .img_banner .banner_sub_text p { font-size: 14px; }
+  .apply_now_btn {
+    bottom: 8.7rem;
+    right: 2.4rem;
+    font-size: 1.6rem; 
+    letter-spacing: -0.02rem;
+    padding: 1.3rem 3rem 1.4rem 2.7rem;
+    background: url(images/round_border.svg) no-repeat center/ 100% auto;
+  }
+
+  .rolling_banner { font-size: 32px; padding: 0 0 calc(12rem - 1.2rem); }
+  .rolling_banner .rolling_row { height: calc(3.2rem + 1.2rem); }
+  
+  .section_title { padding-left: 2.1rem; }
+  .section_title .small_title { font-size: 1.6rem; margin-bottom: 0.4rem; line-height: 1.5; }
+  .section_title h3 { font-size: 3.2rem; line-height: 1.3;}
+  .recruit_section.hiring { padding-left: 0; padding-right: 0;}
+  .hiring_job_list {
+    margin-left: 2.4rem;
+  } 
+  .hiring_job_item {
+    padding: 2.2rem 2.4rem 2.2rem 0;
+  }
+  .hiring_job_item h4 { font-size: 2.4rem; }
+  .hiring_job_item .job_experience { font-size: 1.2rem; margin-right: 1.2rem; }
+  .hiring_job_item .hiring_badge { font-size: 1.2rem; padding: 0.7rem 1.8rem 0.9rem; margin-right: 1rem; }
+  .hiring_job_item button { width: 2.8rem; height: 2.8rem; }
+
+  .recruit_section.cultures { margin-top: 7.2rem; padding: 0 0 16rem; }
+  .cultures_cont { padding: 0 2.4rem; margin-top: 3.2rem; }
+  .cultures_list { justify-content: space-between; }
+  .cultures_item {
+    width: calc((100% - 0.7rem) / 2);
+    margin-right: 0;
+    padding: 3rem 1rem;
+  }
+  .cultures_item:nth-child(n + 6) {margin-top: 0;}
+  .cultures_item:nth-child(n + 5) {margin-top: 0;}
+  .cultures_item:nth-child(n + 4) {margin-top: 0;}
+  .cultures_item:nth-child(n + 3) { margin-top: 0.8rem;}
+  .cultures_item:nth-child(3n) { margin-right: 0; }
+  .cultures_item:nth-child(5n) { margin-right: 0; }
+  .cultures_item:nth-child(4n) {margin-right: 0;}
+
+
+  .culture_title { font-size: 1.4rem; margin-bottom: 0; }
+  .culture_desc { font-size: 1.2rem; }
+  .cultures_item::before { width: 2.8rem; height: 2.8rem; margin-bottom: 0.8rem; }
+
+  .footer_cont { padding: 3rem 2.4rem 2.7rem; }
+
+  .footer_cont address { font-size: 14px; }
+  .footer_cont address .office { margin-right: 0; }
+  .footer_cont address > div > div:last-child { margin-top: 1.4rem; }
+  .footer_cont address .office + div { margin-top: 2.6rem; }
+  .footer_cont address > div > div:last-child { margin-top: 1.2rem; }
+  .footer_cont .copyright { font-size: 1.1rem; }
+
+  .top_button { width: 3.6rem; height: 3.6rem; top: 3rem; right: 2.4rem; }
+}

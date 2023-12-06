@@ -1,0 +1,23 @@
+.monze_guide_section { font-family: 'Pretendard', sans-serif; }
+.monze_guide_section { opacity: 0; }
+.main_section { padding: 0; position: relative; }
+.main_section_title { text-align: center; font-size: 34px; font-weight: 600; }
+.monze_guide_section .tab_area .tab_list { display: flex; justify-content: center; margin-top: 30px; }
+.monze_guide_section .tab_area .tab_list .tab_item { font-size: 22px; font-weight: 400; color: #666; cursor: pointer; }
+.monze_guide_section .tab_area .tab_list .tab_item:nth-last-child(n+2) { margin-right: 20px; }
+.monze_guide_section .tab_area .tab_list .tab_item.on { color: #000; background: linear-gradient(to top, rgba(255, 192, 203, 0.5), rgba(255, 192, 203, 0.5) 50%, transparent 0); }
+.guide_slide_area { margin-top: 40px; position: relative; padding-bottom: 60px }
+.guide_slide_area .tabcont { overflow: hidden; }
+.guide_slide_area .tabcont .swiper-slide { border-radius: 8px; overflow: hidden; position: relative;  }
+.guide_slide_area .tabcont .swiper-slide img { width: 100%; height: auto; }
+.guide_slide_area .tabcont .swiper-slide .guide_text { position: absolute; bottom: 0; left: 0; padding: 20px; box-sizing: border-box; color: #fff; font-size: 20px; }
+.guide_slide_area .swiper-button-next:after, .guide_slide_area .swiper-button-prev:after { content: none; }
+.guide_slide_area .swiper-button-next.swiper-button-disabled, .guide_slide_area .swiper-button-prev.swiper-button-disabled { pointer-events: auto; }
+.guide_slide_area .swiper-button-next, .guide_slide_area .swiper-button-prev {  background-image: url('/iv/test/arrow_forward.svg'); background-repeat: no-repeat; background-position: center; background-color: rgba(255,255,255,0.6); border: 1px solid #eee; width: 44px; height: 44px; top: 50%; }
+.guide_slide_area .swiper-button-next { right: 0; transform: translate(50%, -50%) }
+.guide_slide_area .swiper-button-prev { left: 0; transform: rotate(180deg) translate(50%, 50%); }
+.guide_slide_area .swiper-pagination-fraction { bottom: 0; font-size: 14px; }
+.guide_slide_area .swiper-pagination-current { font-weight: 600; }
+.guide_slide_area .swiper-button-next.swiper-button-disabled, .guide_slide_area .swiper-button-prev.swiper-button-disabled { opacity: 1; }
+.guide_slide_area .swiper-pagination-lock { display: block; }
+.guide_slide_area .swiper-button-lock { display: block; }
